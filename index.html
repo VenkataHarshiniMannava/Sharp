@@ -1,0 +1,16 @@
+const axios = require('axios');
+
+const appointment = {
+  date: '2023-07-30',
+  time: '10:00 AM',
+  title: 'Appointment with Dr. Smith',
+  location: '123 Main St',
+};
+
+axios.post('https://jsonplaceholder.typicode.com/posts', appointment)
+  .then(response => {
+    console.log('Appointment successfully saved:', response.data);
+  })
+  .catch(error => {
+    console.error('Error saving appointment:', error);
+  });
